@@ -10,6 +10,7 @@ function guessTheNumber() {
 
 	for(var i = 1; i <= 3; i++) {
 		var guessedNumber = prompt("Guess any number from 0 - 10\nYou will get 3 chance to win the game\nEnter a number :");
+		if(guessedNumber != '') {
 
 			if(guessedNumber > answer) {
 				alert('Correct answer is smaller!!');
@@ -23,6 +24,9 @@ function guessTheNumber() {
 			} else {
 			alert('Put a number');
 		}
+	} else {
+		alert('Put a number');
+	}
 
 		if(i == 3) {
 			loss.style.display = "block";
