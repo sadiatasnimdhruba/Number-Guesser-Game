@@ -11,18 +11,16 @@ function guessTheNumber() {
 	for(var i = 1; i <= 3; i++) {
 		var guessedNumber = prompt("Guess any number from 0 - 10\nYou will get 3 chance to win the game\nEnter a number :");
 
-		if(guessedNumber != '' && typeof guessedNumber == "number") {
 			if(guessedNumber > answer) {
 				alert('Correct answer is smaller!!');
 			} else if(guessedNumber < answer) {
 				alert('Correct answer is greater!!');
-			} else {
+			} else if(guessedNumber == answer) {
 				win.style.display = "block";
 				win.innerHTML = "You win :)";
 				playAgain.style.display = "block";
 				break;
-			}
-		} else {
+			} else {
 			alert('Put a number');
 		}
 
