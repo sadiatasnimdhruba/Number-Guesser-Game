@@ -9,7 +9,7 @@ function guessTheNumber() {
 	var answer = Math.floor(Math.random()*11);
 
 	for(var i = 1; i <= 3; i++) {
-		var guessedNumber = Number(prompt("Guess any number from 0 - 10\nYou will get 3 chance to win the game\nEnter a number :"));
+		var guessedNumber = prompt("Guess any number from 0 - 10\nYou will get 3 chance to win the game\nEnter a number :");
 
 		if(guessedNumber != '' && typeof guessedNumber == "number") {
 			if(guessedNumber > answer) {
